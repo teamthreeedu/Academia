@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const spaceGrotesk = Space_Grotesk({
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable : "--font-space-grotesk",
   subsets: ["latin"],
+  
 });
 
 export const metadata: Metadata = {
@@ -23,12 +28,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${spaceGrotesk.variable}  antialiased`}>
+           <SignedOut>
+              <SignInButton />
+              <SignUpButton/>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            <main className="flex-1">
+            {children}
+
+            </main>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
