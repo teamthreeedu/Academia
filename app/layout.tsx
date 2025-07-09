@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import {  Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs'
+import { ClerkProvider } from "@clerk/nextjs";
+import { SidebarProvider } from "@/components/ui/sidebar"
+import { AppSidebar } from "./(routes)/(root)/components";
 
 const spaceGrotesk = Space_Grotesk({
 
@@ -32,17 +27,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${spaceGrotesk.variable}  antialiased`}>
-           <SignedOut>
-              <SignInButton />
-              <SignUpButton/>
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+           <SidebarProvider>
+          <AppSidebar/>
             <main className="flex-1">
             {children}
-
             </main>
+            </SidebarProvider>
+
       </body>
     </html>
     </ClerkProvider>
