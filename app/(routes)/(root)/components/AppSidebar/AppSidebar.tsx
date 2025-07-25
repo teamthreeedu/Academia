@@ -28,7 +28,7 @@ export  function AppSidebar() {
            <Image src="/logo.png" alt="Logo academia" width={35} height={35}/>
            {state === "expanded" && (
             <span className="text-xl font-semibold text-gray-800 tracking-wide">
-              Trz
+              TEAM 3
             </span>
            )}
              
