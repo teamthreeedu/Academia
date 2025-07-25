@@ -78,7 +78,7 @@ export function ChaptersBlock(props: ChaptersBlockProps) {
             {isUpdating && (
                 <div className="absolute top-0 right-0 flex intems-center justify-center w-full h-full bg-slate-500/20">
 
-                    <Loader2 className="w-6 h-6 animate-spin text-violet-500"/>
+                    <Loader2 className="w-6 h-6 animate-spin text-blue-500"/>
                 </div>
             )}
             <DragDropContext onDragEnd={ondragEnd}>

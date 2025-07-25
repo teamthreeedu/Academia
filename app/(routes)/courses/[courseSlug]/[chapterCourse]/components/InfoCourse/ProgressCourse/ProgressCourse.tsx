@@ -62,7 +62,7 @@ export function ProgressCourse(props: ProgressCourseProps) {
         <div>
             <div className="my-4 w-full flex items-center gap-2 flex-col p-2 border rounded-md shadow-md bg-white">
                 <span className="text-sm">Progreso del curso | {progressPercentage}%</span>
-                <Progress value={progressPercentage} className="[&>*]:bg-violet-300" />
+                <Progress value={progressPercentage} className="[&>*]:bg-blue-300" />
             </div>
             <div className="my-4 w-full">
                 <Button className="w-full" onClick={() => handleViewChapters(!isCompleted)} variant={isCompleted ? "outline": "default"}>

@@ -46,7 +46,7 @@ export function ProgressCourse(props: ProgressCourseProps) {
 
             {totalChapters > 0 && progressCourse > 0 ? (
                 <div>
-                    <Progress value={progressCourse} className="[&>*]:bg-violet-300" />
+                    <Progress value={progressCourse} className="[&>*]:bg-blue-300" />
                     <p className="text-xs mt-1">{progressCourse} % Completado</p>
                 </div>
             ) : (

@@ -60,11 +60,11 @@ export function HeroBlockCourse(props: HeroBlockCourseProps) {
                 </div>
                 <h2 className="text-xl font-semibold my-4"> {formatPrice(price)}</h2>
                 {purchaseCourse ? (
-                    <Button className="hover:bg-violet-400 text-white font-semibold" disabled={isLoading} onClick={redirectToCourse}>
+                    <Button className="hover:bg-blue-400 text-white font-semibold" disabled={isLoading} onClick={redirectToCourse}>
                         Ver curso
                     </Button>
                 ) : (
-                    <Button className="hover:bg-violet-400 text-white font-semibold" disabled={isLoading} onClick={enrollCourse}>
+                    <Button className="hover:bg-blue-400 text-white font-semibold" disabled={isLoading} onClick={enrollCourse}>
                         Inscribirse ahora
                     </Button>
                 )}

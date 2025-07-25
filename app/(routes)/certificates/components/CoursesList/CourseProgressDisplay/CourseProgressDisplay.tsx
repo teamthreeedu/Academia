@@ -13,7 +13,7 @@ export function CourseProgressDisplay(props: CourseProgressDisplayProps) {
         />
     ):(
         <>
-            <Progress value={progress}  className="[&>*]:bg-violet-300"/> 
+            <Progress value={progress}  className="[&>*]:bg-blue-300"/> 
             <p className="text-xs">{progress} % Completado</p>
         </>
     );

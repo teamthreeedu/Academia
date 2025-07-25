@@ -9,7 +9,7 @@ export function CourseContent(props: CourseChapterProps) {
                 {chapters.map((chapter, index) => (
                     <div key={chapter.id}
                         className="flex items-start space-x-4 border p-2 rounded-lg hover:bg-gray-100 transition-all">
-                        <div className="flex-shrink-0 bg-violet-400 text-white font-semibold rounded-full w-8 h-8 flex items-center justify-center">
+                        <div className="flex-shrink-0 bg-blue-400 text-white font-semibold rounded-full w-8 h-8 flex items-center justify-center">
                             {index + 1}
 
 

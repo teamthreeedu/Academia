@@ -41,7 +41,7 @@ export  function AppSidebar() {
                 <SidebarMenuItem key={item.title} >
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
-                      <div className="p-1 rounded-lg text-white bg-violet-400">
+                      <div className="p-1 rounded-lg text-white bg-blue-400">
                         <item.icon className="w-4 h-4" />
                       </div>
                       {state === "expanded" && <span>{item.title}</span>}

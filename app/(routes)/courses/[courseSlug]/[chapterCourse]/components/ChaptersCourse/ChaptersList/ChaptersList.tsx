@@ -22,7 +22,7 @@ export function ChaptersList(props: ChaptersListProps) {
         href={`/courses/${courseSlug}/${chapter.id}`}
         key={chapter.id}
         className={`flex items-center justify-between border-gray-200 rounded-md transition-all duration-300 
-          ${isCurrent ? "bg-violet-400" : "hover:bg-violet-200 hover:shadow-lg"}`}
+          ${isCurrent ? "bg-blue-400" : "hover:bg-blue-200 hover:shadow-lg"}`}
       >
         <div className="flex items-center gap-2 border shadow-md w-full justify-between rounded-md p-2">
           <span>{chapter.title}</span>

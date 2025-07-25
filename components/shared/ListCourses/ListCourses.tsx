@@ -19,7 +19,7 @@ import { ProgressCourse } from "./ProgressCourse";
                     {courses.map(({id, imageUrl, title, price, level,slug, category,chapters}) => (
                         <Link key={id} href={`/courses/${slug}`}
                         className="border rounded-lg relative transition-shadow hover:shadow-lg shadow-violtet-300/40 shadow-md">
-                        <span className="absolute top-2 right-2 z-10 px-2 py-1 bg-white text-violet-500
+                        <span className="absolute top-2 right-2 z-10 px-2 py-1 bg-white text-blue-500
                         font-medium rounded-full text-xs shadow-md">{category}</span>
                         <div className="w-full h-[180px] relative">
                             <Image 
