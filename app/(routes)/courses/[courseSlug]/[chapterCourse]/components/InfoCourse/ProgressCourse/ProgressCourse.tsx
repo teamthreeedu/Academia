@@ -1,4 +1,3 @@
-
 "use client"
 import { Progress } from "@/components/ui/progress";
 import { ProgressCourseProps } from "./ProgressCourse.types";
@@ -7,18 +6,20 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+
 export function ProgressCourse(props: ProgressCourseProps) {
     const { userProgress, chapterCourseId, infoCourse } = props;
     const { id, slug, chapters } = infoCourse;
     const [isCompleted, setIsCompleted] = useState(false);
     const router = useRouter();
 
-    useEffect(() =>{
-        const progress= userProgress.find((progress) => progress.chapterId === chapterCourseId);
-        if(progress){
+    useEffect(() => {
+        const progress = userProgress.find((progress) => progress.chapterId === chapterCourseId);
+        if (progress) {
             setIsCompleted(progress.isCompleted);
         }
-    }, [])
+    }, [userProgress, chapterCourseId]); // Agregar las dependencias aquí
+
     const handleViewChapters = async (isCompleted: boolean) => {
         try {
             await axios.patch(`/api/course/${id}/chapter/${chapterCourseId}/progress`, JSON.stringify({ isCompleted }))

@@ -4,13 +4,13 @@ import { NextResponse } from "next/server";
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { courseId: string; chapterId: string } }
+  { params }: { params: Promise<{ courseId: string; chapterId: string }> }
 ) {
-  const { userId } = await auth();
-  const { courseId, chapterId } = params;
-  const { isCompleted } = await req.json();
-
   try {
+    const { userId } = await auth();
+    const { courseId, chapterId } = await params; // Agregar await aquí
+    const { isCompleted } = await req.json();
+
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
