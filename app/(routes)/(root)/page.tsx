@@ -1,9 +1,15 @@
-import { Button } from "@/components/ui/button";
+import { getHomeCourses } from "@/actions/getHomeCourses";
+import { ExploreCourses } from "./components";
+import { ListCourses } from "@/components/shared";
 
-export default function Home() {
+export default async function Home() {
+
+  const listCourses = await getHomeCourses();
   return (
+
     <div>
-      <Button>Hola mundo</Button>
+      <ExploreCourses/>
+      <ListCourses title="Top cursos" courses={listCourses} />
     </div>
   );
 }
