@@ -10,9 +10,9 @@ import { ChaptersCourse, InfoCourse } from "./components";
 export default async function ChapterCoursePage({ 
   params 
 }: {
-  params: { courseSlug: string; chapterCourse: string }
+  params: Promise<{ courseSlug: string; chapterCourse: string }>
 }) {
-  const { courseSlug, chapterCourse } = params;
+  const { courseSlug, chapterCourse } = await params;
 
   const user = await currentUser();
   if (!user) return redirect("/");
