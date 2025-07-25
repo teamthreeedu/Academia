@@ -12,9 +12,8 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { Download, Scale } from "lucide-react";
+import { Download } from "lucide-react";
 import { useRef } from "react";
-import { Scada } from "next/font/google";
 import html2canvas from "html2canvas-pro";
 import { DowndloadCertificateProps } from "./DowndloadCertificate.types";
 import { Certificate } from "./Certificate";

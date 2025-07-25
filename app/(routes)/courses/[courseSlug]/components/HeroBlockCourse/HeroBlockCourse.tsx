@@ -3,7 +3,7 @@ import { useState } from "react";
 import { HeroBlockCourseProps } from "./HeroBlockCourse.types";
 import { useRouter } from "next/navigation";
 import { IconBadge } from "@/components/shared";
-import { Calendar, ChartNoAxesColumn, Icon, Timer } from "lucide-react";
+import { Calendar, ChartNoAxesColumn, Timer } from "lucide-react";
 import { formatPrice } from "@/lib/formatPrice";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";

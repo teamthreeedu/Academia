@@ -2,9 +2,7 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
-  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
@@ -15,12 +13,9 @@ import {
   SidebarMenuSubItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { House } from "lucide-react";
 import Link from "next/link";
 import { routes, routesTeacher } from "./AppSidebar.data";
-import { Span } from "next/dist/trace";
 import Image from "next/image";
-import { spawn } from "child_process";
 
 
 export  function AppSidebar() {
