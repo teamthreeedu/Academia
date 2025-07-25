@@ -7,15 +7,11 @@ import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { ChaptersCourse, InfoCourse } from "./components";
 
-// ✅ Interfaz para los parámetros de ruta
-interface PageProps {
-  params: {
-    courseSlug: string;
-    chapterCourse: string;
-  };
-}
-
-export default async function ChapterCoursePage({ params }: PageProps) {
+export default async function ChapterCoursePage({ 
+  params 
+}: {
+  params: { courseSlug: string; chapterCourse: string }
+}) {
   const { courseSlug, chapterCourse } = params;
 
   const user = await currentUser();
