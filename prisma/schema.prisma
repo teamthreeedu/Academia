@@ -1,9 +1,8 @@
+
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 
 generator client {
   provider = "prisma-client-js"
@@ -25,14 +24,10 @@ model Course {
   isPublished Boolean @default(false)
   level String? @db.Text
   category String? @db.Text
-
   chapters Chapter[]
   purchases Purchase[]
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-
 }
 
 model Chapter {
@@ -43,30 +38,24 @@ model Chapter {
   position Int
   isPublished Boolean @default(false)
   isFree Boolean @default(false)
-
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
-
-  userProgress UserProgress[] // Type "UserProgress" is neither a built-in type, nor recognized custom type
-
+  userProgress UserProgress[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
+  
   @@index([courseId])
 }
 
 model UserProgress {
   id String @id @default(uuid())
   userId String
-
   chapterId String
   chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-
   isCompleted Boolean @default(false)
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
+  
   @@unique([userId, chapterId])
   @@index([chapterId])
 }
@@ -74,15 +63,12 @@ model UserProgress {
 model Purchase {
   id String @id @default(uuid())
   userId String
-
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
-
   price Float
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
+  
   @@unique([userId, courseId])
   @@index([courseId])
 }
@@ -91,8 +77,6 @@ model StripeCustomer {
   id String @id @default(uuid())
   userId String @unique
   stripeCustomerId String
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
-
