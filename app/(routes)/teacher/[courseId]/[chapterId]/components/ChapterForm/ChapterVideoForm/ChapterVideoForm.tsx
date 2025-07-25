@@ -26,7 +26,7 @@ export function ChapterVideoForm(props: ChapterVideoFormProps){
 
             toast("Video actualizado 👍")
             router.refresh();
-        } catch (error) {
+        } catch {
             toast.error("Algo salió mal 😕")
         }
     };

@@ -1,5 +1,4 @@
 "use client";
-import { Action, toast } from "sonner";
 import { ActionsProps } from "./Actions.types";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash } from "lucide-react";
@@ -17,6 +16,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { toast } from "sonner";
 
 export function Actions(props: ActionsProps) {
     const { courseId } = props;

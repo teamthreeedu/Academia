@@ -9,7 +9,6 @@ import { FormCahpterName } from "./FormChapterName";
 
 import { DragDropContext, Droppable, DropResult, Draggable } from "@hello-pangea/dnd";
 import { useRouter } from "next/navigation";
-import { set } from "zod";
 import axios from "axios";
 import { toast } from "sonner";
 
@@ -49,7 +48,7 @@ export function ChaptersBlock(props: ChaptersBlockProps) {
             })
             toast("Orden actualizado 🎉")
             router.refresh();
-        } catch (error) {
+        } catch{
                 toast("Algo salió mal 😕");
         }
         finally{

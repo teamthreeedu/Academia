@@ -1,8 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server"
-import Head from "next/head";
 import { Header } from "./components";
 import prisma from "@/lib/prisma";
-import { List } from "lucide-react";
 import { ListCourses } from "./components/ListCourses";
 
 export default async function TeacherPage(){
