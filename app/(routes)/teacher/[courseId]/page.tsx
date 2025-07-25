@@ -2,7 +2,6 @@
 import prisma from '@/lib/prisma';
 import { auth } from '@clerk/nextjs/server';
 import React from 'react';
-import { Header } from '../components';
 import { ChaptersBlock, CourseForm, CourseImage, CoursePrice, HeaderCourse } from './components';
 
 export default async function CoursePage({ 

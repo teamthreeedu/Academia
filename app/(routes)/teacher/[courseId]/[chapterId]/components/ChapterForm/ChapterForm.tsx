@@ -2,7 +2,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ChapterFormProps } from "./ChapterForm.types";
-import { Arrow } from "@radix-ui/react-tooltip";
 import { ArrowLeft, Cog, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { TitleBlock } from "../../../components";

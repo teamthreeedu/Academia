@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UploadButton } from "@/utils/uploadthing";
-import { set } from "zod";
 import { toast } from "sonner";
 import axios from "axios";
 

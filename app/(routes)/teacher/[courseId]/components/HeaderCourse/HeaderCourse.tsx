@@ -5,7 +5,6 @@ import { HeaderCourseProps } from "./HeaderCourse.types";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, MoveLeft, Trash } from "lucide-react";
-import { set } from "zod";
 import axios from "axios";
 import { toast } from "sonner";
 
